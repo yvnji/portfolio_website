@@ -4,16 +4,16 @@ import './globals.css';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
-  title: 'Yunji Kim | Software Engineer (Front End / Back End)',
+  title: 'Evelyn Kim | Software Engineer (Front End / Back End)',
   description: 'I build thoughtful web services with user experience at the core.',
-  keywords: ['Yunji Kim', 'Yunji Kim Portfolio', 'Software Engineer', 'Frontend Developer', 'Backend Developer'],
-  authors: [{ name: 'Yunji Kim' }],
-  creator: 'Yunji Kim',
+  keywords: ['Evelyn Kim', 'Evelyn Kim Portfolio', 'Software Engineer', 'Frontend Developer', 'Backend Developer'],
+  authors: [{ name: 'Evelyn Kim' }],
+  creator: 'Evelyn Kim',
   openGraph: {
     type: 'website',
-    title: 'Yunji Kim | Software Engineer (Front End / Back End)',
+    title: 'Evelyn Kim | Software Engineer (Front End / Back End)',
     description: 'I build thoughtful web services with user experience at the core.',
-    siteName: 'Yunji Kim Portfolio',
+    siteName: 'Evelyn Kim Portfolio',
   },
 };
 

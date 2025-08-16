@@ -72,7 +72,7 @@ export default function WorkSection({ work }: WorkSectionProps) {
                             Project
                           </span>
                         </div>
-                        <p className='mt-1 line-clamp-2 text-sm text-slate-700 opacity-80 dark:text-slate-300'>
+                        <p className='mt-1 text-sm text-slate-700 opacity-80 dark:text-slate-300'>
                           {project.description}
                         </p>
                         <div className='mt-2 flex flex-wrap gap-2'>
