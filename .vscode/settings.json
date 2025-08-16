@@ -1,0 +1,64 @@
+{
+  // 파일 저장할 때 자동으로 prettier 포맷팅 적용
+  "editor.formatOnSave": true,
+
+  // 파일 저장할 때 실행할 액션들
+  "editor.codeActionsOnSave": {
+    // ESLint 규칙에 맞게 자동으로 코드 수정 (예: 사용하지 않는 변수 제거, 세미콜론 추가 등)
+    "source.fixAll.eslint": "explicit",
+    // import 문을 알파벳 순으로 정렬하고 중복 제거
+    "source.organizeImports": "explicit"
+  },
+
+  // 기본 포매터를 Prettier로 설정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 각 언어별로 Prettier를 포매터로 사용하도록 명시적 설정
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    // .tsx 파일 (React 컴포넌트)에서 Prettier 사용
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    // .jsx 파일에서 Prettier 사용
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // 타이핑할 때 자동으로 import 제안 표시
+  "typescript.suggest.autoImports": true,
+
+  // 파일명을 변경하거나 파일을 이동할 때 import 경로 자동 업데이트
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // TypeScript/TSX 파일에서 Tailwind CSS 클래스명 자동완성 활성화
+  "tailwindCSS.includeLanguages": {
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+
+  // 파일 탐색기에서 숨길 폴더들
+  "files.exclude": {
+    "**/.next": true, // Next.js 빌드 폴더
+    "**/node_modules": true, // npm 패키지 폴더
+    "**/.turbo": true // Turbo 캐시 폴더
+  },
+
+  // 전체 프로젝트 검색에서 제외할 폴더들
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/.turbo": true
+  },
+
+  // 일반 CSS validation 끄기 (Tailwind CSS의 @apply 등이 오류로 표시되는 것 방지)
+  "css.validate": false,
+
+  // 탭을 스페이스 2개로 변환 (Next.js/React 프로젝트 표준)
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
+}

@@ -1,26 +1,137 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@config "../../tailwind.config.ts";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-*: initial;
+
+  /* 기본 색상 */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Amber 색상 */
+  --color-amber-50: #fffbeb;
+
+  /* Slate 색상 */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Gray 색상 */
+  --color-gray-200: #e5e7eb;
+
+  /* Rose 색상 */
+  --color-rose-100: #fee2e2;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #f43f5e;
+  --color-rose-500: #f43f5e;
+
+  /* Violet 색상 */
+  --color-violet-100: #e9d5ff;
+  --color-violet-300: #d8b4fe;
+  --color-violet-400: #c084fc;
+  --color-violet-500: #a855f7;
+  --color-violet-600: #9333ea;
+  --color-violet-700: #7e22ce;
+  --color-violet-800: #6b21a8;
+  --color-violet-900: #581c87;
+
+  /* 테마 색상 */
+  --color-primary: #2563eb;
+  --color-secondary: #f1f5f9;
+  --color-accent: #60a5fa;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-muted: #f8fafc;
+  --color-border: #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .dark {
+    color-scheme: dark;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    'Pretendard Variable',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Noto Sans KR',
+    'Apple SD Gothic Neo',
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base layer for resets */
+@layer base {
+  /* Remove focus styles */
+  *:focus {
+    outline: none;
+  }
+}
+
+/* Components layer for reusable components */
+@layer components {
+  /* Navigation specific styles */
+  .nav-link {
+    @apply transition-colors duration-200;
+  }
+
+  .nav-link--active {
+    @apply text-slate-900 dark:text-slate-50;
+  }
+
+  .nav-link--inactive {
+    @apply text-slate-900/40 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-50;
+  }
+
+  /* Indicator styles */
+  .nav-indicator {
+    @apply h-px bg-current transition-all duration-200;
+  }
+
+  .nav-indicator--active {
+    @apply w-16;
+  }
+
+  .nav-indicator--inactive {
+    @apply w-8 group-hover:w-16;
+  }
+}
+
+/* Utilities layer for helper classes */
+@layer utilities {
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
 }
