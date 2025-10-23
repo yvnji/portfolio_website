@@ -21,7 +21,7 @@ export default function WorkSection({ work }: WorkSectionProps) {
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className='group relative'
         >
-          <div className='grid sm:grid-cols-8 md:gap-4'>
+          <div className='grid gap-6 sm:grid-cols-8 md:gap-4'>
             {/* Left: timeline/year */}
             <div className='mt-1 flex-shrink-0 text-xs font-medium text-slate-900/60 sm:col-span-2 sm:w-32 dark:text-slate-400'>
               {workItem.year}

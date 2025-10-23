@@ -2,7 +2,7 @@ import { PortfolioData } from '@/types/portfolio';
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
-    name: 'Evelyn Kim',
+    name: 'Yunji Kim',
     title: 'Software Engineer',
     description: 'Currently based in Melbourne, Australia 🦘',
   },
