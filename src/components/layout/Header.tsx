@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, Linkedin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -24,23 +24,11 @@ export default function Header({ personalInfo, socialMedia }: HeaderProps) {
   ];
 
   const socialLinks = [
-    // {
-    //   href: socialMedia[0].url,
-    //   icon: Github,
-    //   label: 'GitHub',
-    //   show: !!socialMedia[0].url,
-    // },
     {
       href: socialMedia[0].url,
       icon: Linkedin,
       label: 'LinkedIn',
       show: !!socialMedia[0].url,
-    },
-    {
-      href: socialMedia[1].url,
-      icon: FileText,
-      label: 'CV',
-      show: !!socialMedia[1].url,
     },
   ].filter((link) => link.show);
 

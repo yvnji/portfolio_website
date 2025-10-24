@@ -59,7 +59,6 @@ export interface PortfolioData {
   about: About;
   skills: Skills;
   work: Work[];
-  experience: Experience[];
   projects: Project[];
   socialMedia: SocialMedia[];
 }

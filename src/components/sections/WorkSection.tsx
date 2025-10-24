@@ -21,15 +21,15 @@ export default function WorkSection({ work }: WorkSectionProps) {
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className='group relative'
         >
-          <div className='grid gap-6 sm:grid-cols-8 md:gap-4'>
+          <div className='gap-6 md:gap-4'>
             {/* Left: timeline/year */}
-            <div className='mt-1 flex-shrink-0 text-xs font-medium text-slate-900/60 sm:col-span-2 sm:w-32 dark:text-slate-400'>
+            <div className='mb-4 flex-shrink-0 text-xs font-medium text-slate-900/60 sm:col-span-2 sm:w-32 dark:text-slate-400'>
               {workItem.year}
             </div>
 
             {/* Right: content */}
             <div className='flex-1 sm:col-span-6'>
-              <div className='mb-3 lg:mb-4'>
+              <div className='mb-2'>
                 <h3 className='text-lg font-semibold whitespace-pre-wrap text-slate-900 dark:text-slate-100'>
                   {workItem.title}
                 </h3>
@@ -42,9 +42,9 @@ export default function WorkSection({ work }: WorkSectionProps) {
                 {workItem.description}
               </p>
 
-              {/* Related projects */}
+              {/* Work projects */}
               {workItem.projects && workItem.projects.length > 0 && (
-                <div className='mt-4 space-y-3'>
+                <div className='mt-4 ml-0.5 space-y-3'>
                   {workItem.projects.map((project) => (
                     <a
                       key={project.id}
@@ -72,7 +72,7 @@ export default function WorkSection({ work }: WorkSectionProps) {
                             Project
                           </span>
                         </div>
-                        <p className='mt-1 text-sm text-slate-700 opacity-80 dark:text-slate-300'>
+                        <p className='mt-1 text-sm whitespace-pre-line text-slate-700 opacity-80 dark:text-slate-300'>
                           {project.description}
                         </p>
                         <div className='mt-2 flex flex-wrap gap-2'>
@@ -92,7 +92,7 @@ export default function WorkSection({ work }: WorkSectionProps) {
               )}
             </div>
 
-            {/* Experience images */}
+            {/* Work images */}
             {workItem.imageUrls && workItem.imageUrls.length > 0 && (
               <div className='sm:col-span-8'>
                 <div className='mt-3'>
